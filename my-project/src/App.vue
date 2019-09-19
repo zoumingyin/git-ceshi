@@ -2,12 +2,19 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
+    <button @click="click">aaaaa</button>
   </div>
+
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  methods:{
+    click:function () {
+      alert("dddd")
+    }
+  }
 }
 </script>
 
