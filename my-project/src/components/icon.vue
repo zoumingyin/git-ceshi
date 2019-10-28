@@ -14,58 +14,11 @@
 <script>
 export default {
   name: 'headIcon',
+  props: {
+    imgList: Array
+  },
   data() {
-    return {
-      imgList: [
-        {
-          id: '002',
-          src:
-            'https://img1.qunarzz.com/piao/fusion/1810/50/26ffa31b56646402.png',
-          text: '成都海昌'
-        },
-        {
-          id: '003',
-          src:
-            'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          text: '景点门票'
-        },
-        {
-          id: '004',
-          src:
-            'https://img1.qunarzz.com/piao/fusion/1810/50/26ffa31b56646402.png',
-          text: '成都海昌'
-        },
-        {
-          id: '005',
-          src:
-            'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          text: '景点门票'
-        },
-        {
-          id: '006',
-          src:
-            'https://img1.qunarzz.com/piao/fusion/1810/50/26ffa31b56646402.png',
-          text: '成都海昌'
-        },
-        {
-          id: '007',
-          src:
-            'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          text: '景点门票'
-        },
-        {
-          id: '008',
-          src:
-            'https://img1.qunarzz.com/piao/fusion/1810/50/26ffa31b56646402.png',
-          text: '成都海昌'
-        },
-        {
-          id: '009',
-          src:
-            'https://img1.qunarzz.com/piao/fusion/1810/50/26ffa31b56646402.png',
-          text: '成都海昌'
-        }
-      ]
+    return { 
     }
   },
   computed: {
