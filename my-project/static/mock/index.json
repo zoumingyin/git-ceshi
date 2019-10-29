@@ -43,6 +43,18 @@
         "src": "https://img1.qunarzz.com/piao/fusion/1810/50/26ffa31b56646402.png",
         "text": "成都海昌"
       }
+    ],
+    "swiper": [
+      {
+        "id": "001",
+        "src":
+          "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/201910/78b240572657a6da67e662540c846dd6.jpg_750x200_b75c8be9.jpg"
+      },
+      {
+        "id": "002",
+        "src":
+          "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/201910/f88b0d89d32acd8cfffa8b05e4eb3875.jpg_750x200_a404dd7b.jpg"
+      }
     ]
   }
 

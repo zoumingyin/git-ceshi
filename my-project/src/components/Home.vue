@@ -1,7 +1,7 @@
 <template>
     <div>
         <home-header :city="city"></home-header>
-        <home-swiper :imgList="imgList"></home-swiper>
+        <home-swiper :swiper="swiper"></home-swiper>
         <home-icon :imgList="imgList"></home-icon>
         <home-remmend></home-remmend>
     </div>
@@ -24,7 +24,8 @@
     data () {
       return {
         city: '',
-        imgList: []
+        imgList: [],
+        swiper: []
       }
     },
     methods: {
@@ -39,6 +40,7 @@
            console.log(data)
            this.city = data.city 
            this.imgList = data.imgList
+           this.swiper = data.swiper
          }
         }
     },

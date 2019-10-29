@@ -2,7 +2,7 @@
   <div>
     <swiper :options="swiperOption">
       <!-- slides -->
-      <swiper-slide v-for="item of imgList" :id="item.id" :key="item.id" class="swiper-img">
+      <swiper-slide v-for="item of swiper" :id="item.id" :key="item.id" class="swiper-img">
         <img :src="item.src" alt />
       </swiper-slide>
       <!-- Optional controls -->
@@ -16,7 +16,7 @@
 export default {
   name: 'HomeSwiper',
   props: {
-    imgList: Array
+    swiper: Array
   },
   data() {
     return {
