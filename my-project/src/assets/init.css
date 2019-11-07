@@ -82,3 +82,6 @@ ul,ol,li{
 .cursor{
     cursor: pointer;
 }
+body,html{
+background: #eee;
+}

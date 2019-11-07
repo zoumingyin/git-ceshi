@@ -34,6 +34,7 @@
         .then(this.getHomeInfoSucc)
       },
       getHomeInfoSucc (res) {
+        debugger
         res = res.data
          if (res.ret && res.data) {
            const data = res.data
