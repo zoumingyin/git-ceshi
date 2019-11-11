@@ -2,17 +2,17 @@
   <div class="contents" ref="wrapper">
     <div class="content">
       <div class="mid">
-        <div class="title" :curr="cityList.city">{{cityList.city}}</div>
-        <div class="cityBox" v-for="(item,index) of cityList.currCity" :key="index">
-          <div class="cityItem">{{item.name}}</div> 
+        <div class="title">{{currCity}}</div>
+        <div class="cityBox" >
+          <div class="cityItem" v-for="(item,index) of curr" :key="index">{{item}}</div> 
         </div>
       </div>
       <div class="bottom" 
-        v-for="(item,index) of cityList.list" 
+        v-for="(item,index) of cityList" 
         :key="index"
-        :ref="item.index"
+        :ref="item.initial"
       >
-        <div class="title">{{item.index}}</div>
+        <div class="title">{{item.initial}}</div>
         <div class="bottom-box">
           <div class="bottom-item" v-for="(item,index) of item.list" :key="index">{{item.name}}</div> 
         </div>
@@ -29,15 +29,16 @@ export default {
     this.scroll = new Bscroll(this.$refs.wrapper)
   },
   props: {
-    cityList: Object,
-    letter: String
+    cityList: Array,
+    curr: Array,
+    letter: String,
+    currCity: String
   },
   watch: {
     letter () {
       if (this.letter) {
         const el = this.$refs[this.letter][0] 
-        this.scroll.scrollToElement(el)
-        console.log(el)
+        this.scroll.scrollToElement(el) 
       } 
     }
   }
