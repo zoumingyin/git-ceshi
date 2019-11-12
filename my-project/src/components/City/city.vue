@@ -1,7 +1,11 @@
 <template>
   <div class="list">
+
     <div>
       <div class="header a">
+            <div>
+      <router-link to="/">></router-link>
+    </div>
         <div class="headCity">城市选择</div>
         <input type="text" v-model="keyword" placeholder="请输入城市名称" />
       </div>

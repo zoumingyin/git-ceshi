@@ -2,11 +2,22 @@
   <div class="contents" ref="wrapper">
     <div class="content">
       <div class="mid">
-        <div class="title">{{currCity}}</div>
+        <div class="title">
+          <div>当前城市：</div>
+          <div class="title cityItem" @click="handClick(this.$store.state.city)">{{this.$store.state.city}}</div>
+          </div>
+           <div>
+        热门城市：
+      </div>
         <div class="cityBox" >
-          <div class="cityItem" v-for="(item,index) of curr" :key="index">{{item}}</div> 
+          <div 
+          class="cityItem" v-for="(item,index) of curr" 
+          :key="index" @click="handClick(item)"
+          >{{item}}
+          </div> 
         </div>
       </div>
+     
       <div class="bottom" 
         v-for="(item,index) of cityList" 
         :key="index"
@@ -14,7 +25,8 @@
       >
         <div class="title">{{item.initial}}</div>
         <div class="bottom-box">
-          <div class="bottom-item" v-for="(item,index) of item.list" :key="index">{{item.name}}</div> 
+          <div class="bottom-item" v-for="(item,index) of item.list" :key="index" @click="handClick(item.name
+          )">{{item.name}}</div> 
         </div>
          
       </div>
@@ -25,9 +37,6 @@
 import Bscroll from 'better-scroll'
 export default {
   name: 'list',
-   mounted() { 
-    this.scroll = new Bscroll(this.$refs.wrapper)
-  },
   props: {
     cityList: Array,
     curr: Array,
@@ -41,6 +50,15 @@ export default {
         this.scroll.scrollToElement(el) 
       } 
     }
+  },
+  methods: {
+    handClick (city) { 
+     this.$store.commit('changeCity', city)
+     this.$router.push('/')
+    }
+  },
+   mounted() { 
+    this.scroll = new Bscroll(this.$refs.wrapper)
   }
 }
 </script>
@@ -81,5 +99,8 @@ export default {
     border-bottom: 1px solid #eee;
     border-top: 1px solid #eee;
   }
+}
+.title{
+  overflow hidden
 }
 </style>

@@ -33,8 +33,7 @@
         axios.get('/api/index.json')
         .then(this.getHomeInfoSucc)
       },
-      getHomeInfoSucc (res) {
-        debugger
+      getHomeInfoSucc (res) { 
         res = res.data
          if (res.ret && res.data) {
            const data = res.data

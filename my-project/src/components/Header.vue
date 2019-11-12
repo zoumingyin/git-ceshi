@@ -4,7 +4,7 @@
      <div class="header-input">内容</div>
      <div class="header-right" >
        <router-link to='/City'>
-       {{city}}
+       {{this.$store.state.city}}
        </router-link>
      </div>
     </div>
