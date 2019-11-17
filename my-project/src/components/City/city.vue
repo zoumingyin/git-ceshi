@@ -69,7 +69,6 @@ export default {
         this.cityList.forEach((item, index) => { 
            this.citys = this.citys.concat(item.list)  
         })
-          console.log(this.citys)
       } 
     },
     handChange (letter) {

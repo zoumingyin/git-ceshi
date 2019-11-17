@@ -4,7 +4,7 @@
       <div class="mid">
         <div class="title">
           <div>当前城市：</div>
-          <div class="title cityItem" @click="handClick(this.$store.state.city)">{{this.$store.state.city}}</div>
+          <div class="title cityItem" @click="handClick(this.$store.state.city)">{{this.city}}</div>
           </div>
            <div>
         热门城市：
@@ -35,6 +35,7 @@
 </template>
 <script>
 import Bscroll from 'better-scroll'
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: 'list',
   props: {
@@ -52,13 +53,17 @@ export default {
     }
   },
   methods: {
-    handClick (city) { 
-     this.$store.commit('changeCity', city)
+    handClick (city) {  
+     this.changeCity(city)
      this.$router.push('/')
-    }
+    },
+    ...mapMutations(['changeCity'])
   },
    mounted() { 
     this.scroll = new Bscroll(this.$refs.wrapper)
+  },
+  computed: {
+    ...mapState(['city'])
   }
 }
 </script>

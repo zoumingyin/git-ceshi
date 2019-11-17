@@ -4,17 +4,20 @@
      <div class="header-input">内容</div>
      <div class="header-right" >
        <router-link to='/City'>
-       {{this.$store.state.city}}
+       {{this.currentCity}}
        </router-link>
      </div>
     </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
   export default {
-    name: 'Header',
-    props: {
-      city: String
+    name: 'Header', 
+    computed: {
+      ...mapState({
+        currentCity: 'city'
+      })
     }
   }
 </script>
