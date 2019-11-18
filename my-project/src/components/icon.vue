@@ -3,10 +3,17 @@
     <swiper>
       <!-- slides -->
       <swiper-slide class='swiper-img' v-for='(list,index) of dataList' :key='index'>
-        <div class='icon' v-for='item of list' :key='item.id' id='item.id'>
+        <router-link 
+           :to="'/Detail/'+item.id" 
+           class='icon' 
+           v-for='item of list' 
+           :key='item.id' 
+           id='item.id'
+           tag="div"
+        >
           <img :src='item.src' alt />
           <p>{{item.text}}</p>
-        </div>
+        </router-link>
       </swiper-slide>
     </swiper>
   </div>
